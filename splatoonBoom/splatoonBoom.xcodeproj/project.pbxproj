@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D28B781D212E7EA7002BCD09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B781C212E7EA7002BCD09 /* AppDelegate.swift */; };
+		D28B7825212E7EA7002BCD09 /* splatoonBoom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D28B7823212E7EA7002BCD09 /* splatoonBoom.xcdatamodeld */; };
+		D28B7827212E7EAA002BCD09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28B7826212E7EAA002BCD09 /* Assets.xcassets */; };
+		D28B782A212E7EAA002BCD09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28B7828212E7EAA002BCD09 /* LaunchScreen.storyboard */; };
+		D28B7836212E7F3E002BCD09 /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B7834212E7F3E002BCD09 /* PlayerVC.swift */; };
+		D28B7837212E7F3E002BCD09 /* PlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D28B7835212E7F3E002BCD09 /* PlayerVC.xib */; };
+		D28B7839212E80E2002BCD09 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B7838212E80E2002BCD09 /* CoreDataManager.swift */; };
+		D28B783B212E8390002BCD09 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B783A212E8390002BCD09 /* Player.swift */; };
+		D28B783E212E85F4002BCD09 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B783D212E85F4002BCD09 /* Journal.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D28B7819212E7EA7002BCD09 /* splatoonBoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = splatoonBoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D28B781C212E7EA7002BCD09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D28B7824212E7EA7002BCD09 /* splatoonBoom.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = splatoonBoom.xcdatamodel; sourceTree = "<group>"; };
+		D28B7826212E7EAA002BCD09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D28B7829212E7EAA002BCD09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D28B782B212E7EAA002BCD09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D28B7834212E7F3E002BCD09 /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
+		D28B7835212E7F3E002BCD09 /* PlayerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerVC.xib; sourceTree = "<group>"; };
+		D28B7838212E80E2002BCD09 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D28B783A212E8390002BCD09 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		D28B783D212E85F4002BCD09 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D28B7816212E7EA7002BCD09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D28B7810212E7EA7002BCD09 = {
+			isa = PBXGroup;
+			children = (
+				D28B781B212E7EA7002BCD09 /* splatoonBoom */,
+				D28B781A212E7EA7002BCD09 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D28B781A212E7EA7002BCD09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D28B7819212E7EA7002BCD09 /* splatoonBoom.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D28B781B212E7EA7002BCD09 /* splatoonBoom */ = {
+			isa = PBXGroup;
+			children = (
+				D28B783C212E85DA002BCD09 /* Helper */,
+				D28B781C212E7EA7002BCD09 /* AppDelegate.swift */,
+				D28B7833212E7EE9002BCD09 /* Models */,
+				D28B7832212E7ED2002BCD09 /* Controllers */,
+				D28B7831212E7EC6002BCD09 /* Views */,
+				D28B7826212E7EAA002BCD09 /* Assets.xcassets */,
+				D28B7828212E7EAA002BCD09 /* LaunchScreen.storyboard */,
+				D28B782B212E7EAA002BCD09 /* Info.plist */,
+			);
+			path = splatoonBoom;
+			sourceTree = "<group>";
+		};
+		D28B7831212E7EC6002BCD09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D28B7832212E7ED2002BCD09 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D28B7834212E7F3E002BCD09 /* PlayerVC.swift */,
+				D28B7835212E7F3E002BCD09 /* PlayerVC.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D28B7833212E7EE9002BCD09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D28B7823212E7EA7002BCD09 /* splatoonBoom.xcdatamodeld */,
+				D28B7838212E80E2002BCD09 /* CoreDataManager.swift */,
+				D28B783A212E8390002BCD09 /* Player.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D28B783C212E85DA002BCD09 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D28B783D212E85F4002BCD09 /* Journal.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D28B7818212E7EA7002BCD09 /* splatoonBoom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D28B782E212E7EAA002BCD09 /* Build configuration list for PBXNativeTarget "splatoonBoom" */;
+			buildPhases = (
+				D28B7815212E7EA7002BCD09 /* Sources */,
+				D28B7816212E7EA7002BCD09 /* Frameworks */,
+				D28B7817212E7EA7002BCD09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = splatoonBoom;
+			productName = splatoonBoom;
+			productReference = D28B7819212E7EA7002BCD09 /* splatoonBoom.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D28B7811212E7EA7002BCD09 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = jawnyawn;
+				TargetAttributes = {
+					D28B7818212E7EA7002BCD09 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = D28B7814212E7EA7002BCD09 /* Build configuration list for PBXProject "splatoonBoom" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D28B7810212E7EA7002BCD09;
+			productRefGroup = D28B781A212E7EA7002BCD09 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D28B7818212E7EA7002BCD09 /* splatoonBoom */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D28B7817212E7EA7002BCD09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D28B7837212E7F3E002BCD09 /* PlayerVC.xib in Resources */,
+				D28B782A212E7EAA002BCD09 /* LaunchScreen.storyboard in Resources */,
+				D28B7827212E7EAA002BCD09 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D28B7815212E7EA7002BCD09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D28B7836212E7F3E002BCD09 /* PlayerVC.swift in Sources */,
+				D28B781D212E7EA7002BCD09 /* AppDelegate.swift in Sources */,
+				D28B7839212E80E2002BCD09 /* CoreDataManager.swift in Sources */,
+				D28B783B212E8390002BCD09 /* Player.swift in Sources */,
+				D28B7825212E7EA7002BCD09 /* splatoonBoom.xcdatamodeld in Sources */,
+				D28B783E212E85F4002BCD09 /* Journal.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D28B7828212E7EAA002BCD09 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D28B7829212E7EAA002BCD09 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D28B782C212E7EAA002BCD09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D28B782D212E7EAA002BCD09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D28B782F212E7EAA002BCD09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DGLQEP2M6C;
+				INFOPLIST_FILE = splatoonBoom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jawnyawn.splatoonBoom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D28B7830212E7EAA002BCD09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DGLQEP2M6C;
+				INFOPLIST_FILE = splatoonBoom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jawnyawn.splatoonBoom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D28B7814212E7EA7002BCD09 /* Build configuration list for PBXProject "splatoonBoom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D28B782C212E7EAA002BCD09 /* Debug */,
+				D28B782D212E7EAA002BCD09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D28B782E212E7EAA002BCD09 /* Build configuration list for PBXNativeTarget "splatoonBoom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D28B782F212E7EAA002BCD09 /* Debug */,
+				D28B7830212E7EAA002BCD09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D28B7823212E7EA7002BCD09 /* splatoonBoom.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D28B7824212E7EA7002BCD09 /* splatoonBoom.xcdatamodel */,
+			);
+			currentVersion = D28B7824212E7EA7002BCD09 /* splatoonBoom.xcdatamodel */;
+			path = splatoonBoom.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D28B7811212E7EA7002BCD09 /* Project object */;
+}
