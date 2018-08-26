@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B13A28EC9C1EEAA632CEFB0 /* Pods_splatoonBoom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D615AFE48C4B4C8AEF85C7D /* Pods_splatoonBoom.framework */; };
+		D2231FF121329388001CEB4A /* NewGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2231FEF21329388001CEB4A /* NewGameVC.swift */; };
+		D2231FF221329388001CEB4A /* NewGameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2231FF021329388001CEB4A /* NewGameVC.xib */; };
 		D28B781D212E7EA7002BCD09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B781C212E7EA7002BCD09 /* AppDelegate.swift */; };
 		D28B7825212E7EA7002BCD09 /* splatoonBoom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D28B7823212E7EA7002BCD09 /* splatoonBoom.xcdatamodeld */; };
 		D28B7827212E7EAA002BCD09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28B7826212E7EAA002BCD09 /* Assets.xcassets */; };
@@ -16,9 +19,17 @@
 		D28B7839212E80E2002BCD09 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B7838212E80E2002BCD09 /* CoreDataManager.swift */; };
 		D28B783B212E8390002BCD09 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B783A212E8390002BCD09 /* Player.swift */; };
 		D28B783E212E85F4002BCD09 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B783D212E85F4002BCD09 /* Journal.swift */; };
+		D2CEAB4E2132083C003ED2ED /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CEAB4D2132083C003ED2ED /* Game.swift */; };
+		D2CEAB5121320A18003ED2ED /* playerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CEAB5021320A18003ED2ED /* playerInteractor.swift */; };
+		D2E67B2C2132049700E494D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2E67B2B2132049600E494D4 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06B7E9AA4882E28835979593 /* Pods-splatoonBoom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-splatoonBoom.release.xcconfig"; path = "Pods/Target Support Files/Pods-splatoonBoom/Pods-splatoonBoom.release.xcconfig"; sourceTree = "<group>"; };
+		8D615AFE48C4B4C8AEF85C7D /* Pods_splatoonBoom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_splatoonBoom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0304AA789E4A61457A94B9D /* Pods-splatoonBoom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-splatoonBoom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-splatoonBoom/Pods-splatoonBoom.debug.xcconfig"; sourceTree = "<group>"; };
+		D2231FEF21329388001CEB4A /* NewGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameVC.swift; sourceTree = "<group>"; };
+		D2231FF021329388001CEB4A /* NewGameVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewGameVC.xib; sourceTree = "<group>"; };
 		D28B7819212E7EA7002BCD09 /* splatoonBoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = splatoonBoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28B781C212E7EA7002BCD09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D28B7824212E7EA7002BCD09 /* splatoonBoom.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = splatoonBoom.xcdatamodel; sourceTree = "<group>"; };
@@ -30,6 +41,9 @@
 		D28B7838212E80E2002BCD09 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D28B783A212E8390002BCD09 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		D28B783D212E85F4002BCD09 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		D2CEAB4D2132083C003ED2ED /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		D2CEAB5021320A18003ED2ED /* playerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerInteractor.swift; sourceTree = "<group>"; };
+		D2E67B2B2132049600E494D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B13A28EC9C1EEAA632CEFB0 /* Pods_splatoonBoom.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +63,8 @@
 			children = (
 				D28B781B212E7EA7002BCD09 /* splatoonBoom */,
 				D28B781A212E7EA7002BCD09 /* Products */,
+				ED7120F0CADAE4A16B9C5EB6 /* Pods */,
+				FFD63E41E8DECD90786843CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +79,7 @@
 		D28B781B212E7EA7002BCD09 /* splatoonBoom */ = {
 			isa = PBXGroup;
 			children = (
+				D2CEAB4F21320A08003ED2ED /* Interactor */,
 				D28B783C212E85DA002BCD09 /* Helper */,
 				D28B781C212E7EA7002BCD09 /* AppDelegate.swift */,
 				D28B7833212E7EE9002BCD09 /* Models */,
@@ -70,6 +88,7 @@
 				D28B7826212E7EAA002BCD09 /* Assets.xcassets */,
 				D28B7828212E7EAA002BCD09 /* LaunchScreen.storyboard */,
 				D28B782B212E7EAA002BCD09 /* Info.plist */,
+				D2E67B2B2132049600E494D4 /* GoogleService-Info.plist */,
 			);
 			path = splatoonBoom;
 			sourceTree = "<group>";
@@ -86,6 +105,8 @@
 			children = (
 				D28B7834212E7F3E002BCD09 /* PlayerVC.swift */,
 				D28B7835212E7F3E002BCD09 /* PlayerVC.xib */,
+				D2231FEF21329388001CEB4A /* NewGameVC.swift */,
+				D2231FF021329388001CEB4A /* NewGameVC.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -96,6 +117,7 @@
 				D28B7823212E7EA7002BCD09 /* splatoonBoom.xcdatamodeld */,
 				D28B7838212E80E2002BCD09 /* CoreDataManager.swift */,
 				D28B783A212E8390002BCD09 /* Player.swift */,
+				D2CEAB4D2132083C003ED2ED /* Game.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -108,6 +130,31 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		D2CEAB4F21320A08003ED2ED /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D2CEAB5021320A18003ED2ED /* playerInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		ED7120F0CADAE4A16B9C5EB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0304AA789E4A61457A94B9D /* Pods-splatoonBoom.debug.xcconfig */,
+				06B7E9AA4882E28835979593 /* Pods-splatoonBoom.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FFD63E41E8DECD90786843CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D615AFE48C4B4C8AEF85C7D /* Pods_splatoonBoom.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D28B782E212E7EAA002BCD09 /* Build configuration list for PBXNativeTarget "splatoonBoom" */;
 			buildPhases = (
+				72D75A5C038E691961B2E375 /* [CP] Check Pods Manifest.lock */,
 				D28B7815212E7EA7002BCD09 /* Sources */,
 				D28B7816212E7EA7002BCD09 /* Frameworks */,
 				D28B7817212E7EA7002BCD09 /* Resources */,
+				78B487FE4C37CE8AEDE1CACF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,13 +215,60 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2231FF221329388001CEB4A /* NewGameVC.xib in Resources */,
 				D28B7837212E7F3E002BCD09 /* PlayerVC.xib in Resources */,
 				D28B782A212E7EAA002BCD09 /* LaunchScreen.storyboard in Resources */,
 				D28B7827212E7EAA002BCD09 /* Assets.xcassets in Resources */,
+				D2E67B2C2132049700E494D4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72D75A5C038E691961B2E375 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-splatoonBoom-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78B487FE4C37CE8AEDE1CACF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-splatoonBoom/Pods-splatoonBoom-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-splatoonBoom/Pods-splatoonBoom-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D28B7815212E7EA7002BCD09 /* Sources */ = {
@@ -180,7 +276,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D28B7836212E7F3E002BCD09 /* PlayerVC.swift in Sources */,
+				D2CEAB5121320A18003ED2ED /* playerInteractor.swift in Sources */,
+				D2231FF121329388001CEB4A /* NewGameVC.swift in Sources */,
 				D28B781D212E7EA7002BCD09 /* AppDelegate.swift in Sources */,
+				D2CEAB4E2132083C003ED2ED /* Game.swift in Sources */,
 				D28B7839212E80E2002BCD09 /* CoreDataManager.swift in Sources */,
 				D28B783B212E8390002BCD09 /* Player.swift in Sources */,
 				D28B7825212E7EA7002BCD09 /* splatoonBoom.xcdatamodeld in Sources */,
@@ -318,6 +417,7 @@
 		};
 		D28B782F212E7EAA002BCD09 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0304AA789E4A61457A94B9D /* Pods-splatoonBoom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -336,6 +436,7 @@
 		};
 		D28B7830212E7EAA002BCD09 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06B7E9AA4882E28835979593 /* Pods-splatoonBoom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

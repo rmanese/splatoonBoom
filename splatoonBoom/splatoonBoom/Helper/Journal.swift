@@ -13,3 +13,7 @@ import Foundation
 //Add rightbarbutton to navbar playerVC
 //Set up CoreDataManager, xcdatamodel, playerClass
 
+//8/24/18
+//Import firebase, dropped coredata
+//Create and parse player
+//design root VC
