@@ -12,7 +12,10 @@ class PlayerVC: UIViewController {
 
     @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var playerStackView: UIStackView!
+
+    var headerStackView = UIStackView()
+    var dataStackView = UIStackView()
     var player = Player()
     var interactor = PlayerInteractor()
 
@@ -25,11 +28,47 @@ class PlayerVC: UIViewController {
             self.player = player
             DispatchQueue.main.async {
                 self.playerNameLabel.text = self.player.name
+                self.configureDataStackView()
             }
         }
-
+        self.configurePlayerStackView()
         self.tableView.dataSource = self
         self.tableView.delegate = self
+    }
+
+    func configurePlayerStackView() {
+        self.playerStackView.addArrangedSubview(headerStackView)
+        self.configureHeaderStackViews()
+        self.playerStackView.addArrangedSubview(dataStackView)
+        self.playerStackView.axis = .vertical
+        self.playerStackView.distribution = .fillEqually
+        self.playerStackView.spacing = 10
+    }
+
+    func configureHeaderStackViews() {
+        let headers = ["win", "lose", "WL%", "kills", "specials"]
+        for header in headers {
+            let headerLabel = UILabel()
+            headerLabel.text = header
+            headerLabel.textAlignment = .center
+            self.headerStackView.addArrangedSubview(headerLabel)
+            headerLabel.sizeToFit()
+        }
+        self.headerStackView.distribution = .fillEqually
+        self.headerStackView.spacing = 10
+    }
+
+    func configureDataStackView() {
+        let playerData: [Any] = [self.player.wins, self.player.losses, self.player.ratioWL, self.player.kill, self.player.specials]
+        for stat in playerData {
+            let dataLabel = UILabel()
+            dataLabel.text = "\(stat)"
+            dataLabel.textAlignment = .center
+            self.dataStackView.addArrangedSubview(dataLabel)
+        }
+        self.dataStackView.distribution = .fillEqually
+        self.dataStackView.spacing = 10
+        self.dataStackView.alignment = .center
     }
 
     @objc func newMatchTapped() {

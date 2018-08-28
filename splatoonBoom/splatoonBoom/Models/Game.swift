@@ -10,10 +10,9 @@ import Foundation
 
 class Game {
 
-//    var player: Player
-//    var playerName: String
-//    var playerKills: Int16
-//    var playerDeaths: Int16
-//    var gameResult: Bool
+    var playerName: String = ""
+    var playerKills: Int16 = 0
+    var playerSpecials: Int16 = 0
+    var gameResult: Bool = true
 
 }
