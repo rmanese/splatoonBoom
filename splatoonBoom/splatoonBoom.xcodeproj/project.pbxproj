@@ -19,8 +19,9 @@
 		D28B7839212E80E2002BCD09 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B7838212E80E2002BCD09 /* CoreDataManager.swift */; };
 		D28B783B212E8390002BCD09 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B783A212E8390002BCD09 /* Player.swift */; };
 		D28B783E212E85F4002BCD09 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B783D212E85F4002BCD09 /* Journal.swift */; };
+		D2A7D39821365C9B006D203D /* NewGameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7D39721365C9B006D203D /* NewGameInteractor.swift */; };
 		D2CEAB4E2132083C003ED2ED /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CEAB4D2132083C003ED2ED /* Game.swift */; };
-		D2CEAB5121320A18003ED2ED /* playerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CEAB5021320A18003ED2ED /* playerInteractor.swift */; };
+		D2CEAB5121320A18003ED2ED /* PlayerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CEAB5021320A18003ED2ED /* PlayerInteractor.swift */; };
 		D2E67B2C2132049700E494D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2E67B2B2132049600E494D4 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +42,9 @@
 		D28B7838212E80E2002BCD09 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D28B783A212E8390002BCD09 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		D28B783D212E85F4002BCD09 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		D2A7D39721365C9B006D203D /* NewGameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameInteractor.swift; sourceTree = "<group>"; };
 		D2CEAB4D2132083C003ED2ED /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		D2CEAB5021320A18003ED2ED /* playerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerInteractor.swift; sourceTree = "<group>"; };
+		D2CEAB5021320A18003ED2ED /* PlayerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInteractor.swift; sourceTree = "<group>"; };
 		D2E67B2B2132049600E494D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,7 +135,8 @@
 		D2CEAB4F21320A08003ED2ED /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				D2CEAB5021320A18003ED2ED /* playerInteractor.swift */,
+				D2CEAB5021320A18003ED2ED /* PlayerInteractor.swift */,
+				D2A7D39721365C9B006D203D /* NewGameInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -276,7 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D28B7836212E7F3E002BCD09 /* PlayerVC.swift in Sources */,
-				D2CEAB5121320A18003ED2ED /* playerInteractor.swift in Sources */,
+				D2CEAB5121320A18003ED2ED /* PlayerInteractor.swift in Sources */,
 				D2231FF121329388001CEB4A /* NewGameVC.swift in Sources */,
 				D28B781D212E7EA7002BCD09 /* AppDelegate.swift in Sources */,
 				D2CEAB4E2132083C003ED2ED /* Game.swift in Sources */,
@@ -284,6 +287,7 @@
 				D28B783B212E8390002BCD09 /* Player.swift in Sources */,
 				D28B7825212E7EA7002BCD09 /* splatoonBoom.xcdatamodeld in Sources */,
 				D28B783E212E85F4002BCD09 /* Journal.swift in Sources */,
+				D2A7D39821365C9B006D203D /* NewGameInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

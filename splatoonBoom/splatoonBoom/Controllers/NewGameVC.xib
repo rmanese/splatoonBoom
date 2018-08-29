@@ -1,13 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewGameVC" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewGameVC" customModule="splatoonBoom" customModuleProvider="target">
             <connections>
+                <outlet property="defeatButton" destination="BrH-CC-1oO" id="Gp2-Dn-ibf"/>
+                <outlet property="killPickerView" destination="foa-3p-0fr" id="Vde-dp-fcR"/>
+                <outlet property="nameLabel" destination="M96-bF-Ej0" id="Pkh-wF-JDw"/>
+                <outlet property="specialPickerView" destination="aRS-f3-XM6" id="AIw-91-m9g"/>
+                <outlet property="victoryButton" destination="PI7-ft-5w3" id="FMI-iF-wcu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +24,82 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRS-f3-XM6">
+                    <rect key="frame" x="16" y="161" width="50" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="KJo-54-Ac9"/>
+                        <constraint firstAttribute="width" constant="50" id="XIo-7V-7lI"/>
+                    </constraints>
+                </pickerView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M96-bF-Ej0">
+                    <rect key="frame" x="16" y="44" width="343" height="77"/>
+                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="48"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Specials" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zA1-I1-nL8">
+                    <rect key="frame" x="82" y="176" width="98.5" height="45"/>
+                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="28"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kills" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChW-UD-HmX">
+                    <rect key="frame" x="283.5" y="176" width="51.5" height="45"/>
+                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="28"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foa-3p-0fr">
+                    <rect key="frame" x="218" y="161" width="50" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Y1R-PJ-qGd"/>
+                        <constraint firstAttribute="height" constant="75" id="sIV-S2-tFR"/>
+                    </constraints>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PI7-ft-5w3">
+                    <rect key="frame" x="24" y="306" width="150" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="VWg-kC-Bq4"/>
+                        <constraint firstAttribute="width" constant="150" id="zPa-a8-egx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="32"/>
+                    <state key="normal" title="Victory">
+                        <color key="titleColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrH-CC-1oO">
+                    <rect key="frame" x="201" y="306" width="150" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="9md-AI-Bji"/>
+                        <constraint firstAttribute="width" constant="150" id="rxo-z4-xmr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="32"/>
+                    <state key="normal" title="Defeat">
+                        <color key="titleColor" red="1" green="0.18431372549019609" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="M96-bF-Ej0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="1g2-wl-4mD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ChW-UD-HmX" secondAttribute="trailing" constant="40" id="4pd-ZM-KSf"/>
+                <constraint firstItem="PI7-ft-5w3" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="URm-VY-0gL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="M96-bF-Ej0" secondAttribute="trailing" constant="16" id="VSo-nb-gac"/>
+                <constraint firstItem="aRS-f3-XM6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Vuk-yq-1x4"/>
+                <constraint firstItem="BrH-CC-1oO" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="Z9h-t2-MTZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BrH-CC-1oO" secondAttribute="trailing" constant="24" id="ZNM-Es-zbe"/>
+                <constraint firstItem="zA1-I1-nL8" firstAttribute="leading" secondItem="aRS-f3-XM6" secondAttribute="trailing" constant="16" id="Zxw-1y-8gA"/>
+                <constraint firstItem="aRS-f3-XM6" firstAttribute="top" secondItem="M96-bF-Ej0" secondAttribute="bottom" constant="40" id="aNn-JN-Vqb"/>
+                <constraint firstItem="PI7-ft-5w3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="asE-pV-eCQ"/>
+                <constraint firstItem="M96-bF-Ej0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="f6s-MI-eOP"/>
+                <constraint firstItem="ChW-UD-HmX" firstAttribute="leading" secondItem="foa-3p-0fr" secondAttribute="trailing" constant="16" id="fy7-Mt-0mI"/>
+                <constraint firstItem="ChW-UD-HmX" firstAttribute="centerY" secondItem="foa-3p-0fr" secondAttribute="centerY" id="jXJ-qj-Tbn"/>
+                <constraint firstItem="foa-3p-0fr" firstAttribute="top" secondItem="M96-bF-Ej0" secondAttribute="bottom" constant="40" id="lgP-Oq-AxL"/>
+                <constraint firstItem="zA1-I1-nL8" firstAttribute="centerY" secondItem="aRS-f3-XM6" secondAttribute="centerY" id="xt6-MR-3nK"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
 </document>

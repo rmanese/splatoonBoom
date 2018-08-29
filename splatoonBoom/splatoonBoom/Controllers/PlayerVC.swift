@@ -24,16 +24,39 @@ class PlayerVC: UIViewController {
 
         let rightBarButton = UIBarButtonItem(title: "New Match", style: .plain, target: self, action: #selector(newMatchTapped))
         self.navigationItem.rightBarButtonItem = rightBarButton
-        interactor.fetchPlayer { (player, error) in
-            self.player = player
-            DispatchQueue.main.async {
-                self.playerNameLabel.text = self.player.name
-                self.configureDataStackView()
-            }
-        }
+        self.fetchPlayer()
         self.configurePlayerStackView()
         self.tableView.dataSource = self
         self.tableView.delegate = self
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        self.fetchPlayer()
+    }
+
+    func prepareForReuse() {
+        while !self.dataStackView.arrangedSubviews.isEmpty {
+            self.dataStackView.arrangedSubviews[0].removeFromSuperview()
+        }
+    }
+
+    func fetchPlayer() {
+        interactor.fetchPlayer { (player, error) in
+            self.player = player
+            self.fetchGames()
+            DispatchQueue.main.async {
+                self.configureDataStackView()
+                self.playerNameLabel.text = self.player.name
+            }
+        }
+    }
+
+    func fetchGames() {
+        interactor.fetchGame { (games, error) in
+            self.player.games = games
+        }
     }
 
     func configurePlayerStackView() {
@@ -59,7 +82,8 @@ class PlayerVC: UIViewController {
     }
 
     func configureDataStackView() {
-        let playerData: [Any] = [self.player.wins, self.player.losses, self.player.ratioWL, self.player.kill, self.player.specials]
+        let playerData: [Any] = [self.player.wins, self.player.losses, self.player.ratioWL, self.player.kills, self.player.specials]
+        self.prepareForReuse()
         for stat in playerData {
             let dataLabel = UILabel()
             dataLabel.text = "\(stat)"
@@ -72,7 +96,7 @@ class PlayerVC: UIViewController {
     }
 
     @objc func newMatchTapped() {
-        let vc = NewGameVC()
+        let vc = NewGameVC(player: self.player)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
@@ -81,7 +105,7 @@ class PlayerVC: UIViewController {
 extension PlayerVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.player.games.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
