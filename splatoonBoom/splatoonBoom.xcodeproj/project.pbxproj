@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3B13A28EC9C1EEAA632CEFB0 /* Pods_splatoonBoom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D615AFE48C4B4C8AEF85C7D /* Pods_splatoonBoom.framework */; };
+		D207215B213B4CEA0056C23A /* PlayerCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D207215A213B4CEA0056C23A /* PlayerCardView.xib */; };
+		D207215D213B4D090056C23A /* PlayerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207215C213B4D090056C23A /* PlayerCardView.swift */; };
 		D2231FF121329388001CEB4A /* NewGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2231FEF21329388001CEB4A /* NewGameVC.swift */; };
 		D2231FF221329388001CEB4A /* NewGameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2231FF021329388001CEB4A /* NewGameVC.xib */; };
+		D2801D4A2139D8B30011AF93 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2801D482139D8B30011AF93 /* GameCell.swift */; };
+		D2801D4B2139D8B30011AF93 /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2801D492139D8B30011AF93 /* GameCell.xib */; };
 		D28B781D212E7EA7002BCD09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B781C212E7EA7002BCD09 /* AppDelegate.swift */; };
 		D28B7825212E7EA7002BCD09 /* splatoonBoom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D28B7823212E7EA7002BCD09 /* splatoonBoom.xcdatamodeld */; };
 		D28B7827212E7EAA002BCD09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28B7826212E7EAA002BCD09 /* Assets.xcassets */; };
@@ -29,8 +33,12 @@
 		06B7E9AA4882E28835979593 /* Pods-splatoonBoom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-splatoonBoom.release.xcconfig"; path = "Pods/Target Support Files/Pods-splatoonBoom/Pods-splatoonBoom.release.xcconfig"; sourceTree = "<group>"; };
 		8D615AFE48C4B4C8AEF85C7D /* Pods_splatoonBoom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_splatoonBoom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0304AA789E4A61457A94B9D /* Pods-splatoonBoom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-splatoonBoom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-splatoonBoom/Pods-splatoonBoom.debug.xcconfig"; sourceTree = "<group>"; };
+		D207215A213B4CEA0056C23A /* PlayerCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerCardView.xib; sourceTree = "<group>"; };
+		D207215C213B4D090056C23A /* PlayerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardView.swift; sourceTree = "<group>"; };
 		D2231FEF21329388001CEB4A /* NewGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameVC.swift; sourceTree = "<group>"; };
 		D2231FF021329388001CEB4A /* NewGameVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewGameVC.xib; sourceTree = "<group>"; };
+		D2801D482139D8B30011AF93 /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		D2801D492139D8B30011AF93 /* GameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCell.xib; sourceTree = "<group>"; };
 		D28B7819212E7EA7002BCD09 /* splatoonBoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = splatoonBoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28B781C212E7EA7002BCD09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D28B7824212E7EA7002BCD09 /* splatoonBoom.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = splatoonBoom.xcdatamodel; sourceTree = "<group>"; };
@@ -98,6 +106,10 @@
 		D28B7831212E7EC6002BCD09 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D2801D482139D8B30011AF93 /* GameCell.swift */,
+				D2801D492139D8B30011AF93 /* GameCell.xib */,
+				D207215C213B4D090056C23A /* PlayerCardView.swift */,
+				D207215A213B4CEA0056C23A /* PlayerCardView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,11 +230,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D207215B213B4CEA0056C23A /* PlayerCardView.xib in Resources */,
 				D2231FF221329388001CEB4A /* NewGameVC.xib in Resources */,
 				D28B7837212E7F3E002BCD09 /* PlayerVC.xib in Resources */,
 				D28B782A212E7EAA002BCD09 /* LaunchScreen.storyboard in Resources */,
 				D28B7827212E7EAA002BCD09 /* Assets.xcassets in Resources */,
 				D2E67B2C2132049700E494D4 /* GoogleService-Info.plist in Resources */,
+				D2801D4B2139D8B30011AF93 /* GameCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,11 +295,13 @@
 				D28B7836212E7F3E002BCD09 /* PlayerVC.swift in Sources */,
 				D2CEAB5121320A18003ED2ED /* PlayerInteractor.swift in Sources */,
 				D2231FF121329388001CEB4A /* NewGameVC.swift in Sources */,
+				D2801D4A2139D8B30011AF93 /* GameCell.swift in Sources */,
 				D28B781D212E7EA7002BCD09 /* AppDelegate.swift in Sources */,
 				D2CEAB4E2132083C003ED2ED /* Game.swift in Sources */,
 				D28B7839212E80E2002BCD09 /* CoreDataManager.swift in Sources */,
 				D28B783B212E8390002BCD09 /* Player.swift in Sources */,
 				D28B7825212E7EA7002BCD09 /* splatoonBoom.xcdatamodeld in Sources */,
+				D207215D213B4D090056C23A /* PlayerCardView.swift in Sources */,
 				D28B783E212E85F4002BCD09 /* Journal.swift in Sources */,
 				D2A7D39821365C9B006D203D /* NewGameInteractor.swift in Sources */,
 			);

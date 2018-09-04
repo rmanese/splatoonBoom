@@ -15,12 +15,7 @@ class NewGameInteractor {
 
     func createGame(game: Game, completionHandler: @escaping ((Error?) -> Void)) {
         let gameRef = dbRef.child("games").childByAutoId()
-        gameRef.setValue([
-            "gameResult": game.gameResult.rawValue,
-            "playerName": game.playerName,
-            "playerKills": game.playerKills,
-            "playerSpecials": game.playerSpecials,
-            ])
+        gameRef.setValue(Game.convertToDict(game: game))
         completionHandler(nil)
     }
 

@@ -23,7 +23,7 @@ class Game {
     var gameResult: MatchResult = MatchResult.None
 
     class func parseGames(game: Game, data: [String: Any]) -> Game {
-        if let gameResult = data["gameResults"] as? String {
+        if let gameResult = data["gameResult"] as? String {
             if gameResult == "Victory" {
                 game.gameResult = MatchResult.Win
             } else if gameResult == "Defeat" {
@@ -46,7 +46,7 @@ class Game {
 
     class func convertToDict(game: Game) -> [String: Any] {
         return [
-            "gameResult": game.gameResult,
+            "gameResult": game.gameResult.rawValue,
             "playerName": game.playerName,
             "playerKills": game.playerKills,
             "playerSpecials": game.playerSpecials

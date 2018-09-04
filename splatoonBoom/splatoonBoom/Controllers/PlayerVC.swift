@@ -10,21 +10,21 @@ import UIKit
 
 class PlayerVC: UIViewController {
 
-    @IBOutlet weak var playerNameLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var playerStackView: UIStackView!
+    @IBOutlet private weak var playerNameLabel: UILabel!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var playerStackView: UIStackView!
+
+    private var interactor = PlayerInteractor()
 
     var headerStackView = UIStackView()
     var dataStackView = UIStackView()
     var player = Player()
-    var interactor = PlayerInteractor()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let rightBarButton = UIBarButtonItem(title: "New Match", style: .plain, target: self, action: #selector(newMatchTapped))
         self.navigationItem.rightBarButtonItem = rightBarButton
-        self.fetchPlayer()
         self.configurePlayerStackView()
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -48,7 +48,6 @@ class PlayerVC: UIViewController {
             self.fetchGames()
             DispatchQueue.main.async {
                 self.configureDataStackView()
-                self.playerNameLabel.text = self.player.name
             }
         }
     }
@@ -56,6 +55,9 @@ class PlayerVC: UIViewController {
     func fetchGames() {
         interactor.fetchGame { (games, error) in
             self.player.games = games
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
 
@@ -69,7 +71,7 @@ class PlayerVC: UIViewController {
     }
 
     func configureHeaderStackViews() {
-        let headers = ["win", "lose", "WL%", "kills", "specials"]
+        let headers = ["Wins", "Losses", "WL%", "Splats", "Specials"]
         for header in headers {
             let headerLabel = UILabel()
             headerLabel.text = header
@@ -86,7 +88,11 @@ class PlayerVC: UIViewController {
         self.prepareForReuse()
         for stat in playerData {
             let dataLabel = UILabel()
-            dataLabel.text = "\(stat)"
+            if stat as! Double == playerData[2] as! Double {
+                dataLabel.text = String(format: "%.2f", self.player.ratioWL)
+            } else {
+                dataLabel.text = "\(stat)"
+            }
             dataLabel.textAlignment = .center
             self.dataStackView.addArrangedSubview(dataLabel)
         }
@@ -109,7 +115,9 @@ extension PlayerVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = UITableViewCell()
+        cell.textLabel?.text = self.player.games[indexPath.row].gameResult.rawValue
+        return cell
     }
 
 }

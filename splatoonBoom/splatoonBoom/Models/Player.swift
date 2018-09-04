@@ -18,8 +18,9 @@ class Player {
     var streak: Int = 0
     var specials: Int = 0
     var wins: Int = 0
+    var totalGames: Int = 0
     var losses: Int = 0
-    var ratioWL: Double = 0.00
+    var ratioWL: Double = 0
     var kills: Int = 0
     var games: [Game] = []
 
@@ -33,9 +34,12 @@ class Player {
         if let specials = playerDict["specials"] as? Int {
             player.specials = specials
         }
-        if let wins = playerDict["wins"] as? Int, let losses = playerDict["losses"] as? Int {
+        if  let wins = playerDict["wins"] as? Int,
+            let losses = playerDict["losses"] as? Int,
+            let totalGames = playerDict["totalGames"] as? Int {
             player.wins = wins
             player.losses = losses
+            player.totalGames = totalGames
         }
         if let kills = playerDict["kills"] as? Int {
             player.kills = kills
@@ -52,10 +56,15 @@ class Player {
             "streak": player.streak,
             "wins": player.wins,
             "losses": player.losses,
+            "totalGames": player.totalGames,
             "ratioWL": player.ratioWL,
             "kills": player.kills,
             "specials": player.specials
         ]
     }
-    
+
+    class func setWLRatio(player: Player) -> Double {
+        return Double(player.wins / player.totalGames)
+    }
+
 }

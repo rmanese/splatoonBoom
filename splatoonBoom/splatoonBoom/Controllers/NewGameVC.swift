@@ -16,11 +16,11 @@ class NewGameVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource 
     var newGame = Game()
     var interactor = NewGameInteractor()
 
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var specialPickerView: UIPickerView!
-    @IBOutlet weak var killPickerView: UIPickerView!
-    @IBOutlet weak var victoryButton: UIButton!
-    @IBOutlet weak var defeatButton: UIButton!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var specialPickerView: UIPickerView!
+    @IBOutlet private weak var killPickerView: UIPickerView!
+    @IBOutlet private weak var victoryButton: UIButton!
+    @IBOutlet private weak var defeatButton: UIButton!
 
     init(player: Player) {
         self.currPlayer = player
@@ -62,6 +62,8 @@ class NewGameVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource 
     }
 
     @objc func didTapSaveButton() {
+        self.currPlayer.totalGames += 1
+        self.currPlayer.ratioWL = Player.setWLRatio(player: self.currPlayer)
         self.interactor.createGame(game: self.newGame) { (error) in }
         self.interactor.updatePlayer(player: self.currPlayer) { (error) in }
         self.navigationController?.popViewController(animated: true)
