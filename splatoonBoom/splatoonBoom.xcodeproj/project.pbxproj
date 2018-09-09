@@ -12,6 +12,15 @@
 		D207215D213B4D090056C23A /* PlayerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207215C213B4D090056C23A /* PlayerCardView.swift */; };
 		D2231FF121329388001CEB4A /* NewGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2231FEF21329388001CEB4A /* NewGameVC.swift */; };
 		D2231FF221329388001CEB4A /* NewGameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2231FF021329388001CEB4A /* NewGameVC.xib */; };
+		D27C18162145D0790094EC68 /* Blaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C18152145D0790094EC68 /* Blaster.swift */; };
+		D27C18182145D1DD0094EC68 /* Brella.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C18172145D1DD0094EC68 /* Brella.swift */; };
+		D27C181A2145D1E50094EC68 /* Brush.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C18192145D1E50094EC68 /* Brush.swift */; };
+		D27C181C2145D1F00094EC68 /* Charger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C181B2145D1F00094EC68 /* Charger.swift */; };
+		D27C181E2145D1F90094EC68 /* Dualies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C181D2145D1F90094EC68 /* Dualies.swift */; };
+		D27C18202145D2050094EC68 /* Roller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C181F2145D2050094EC68 /* Roller.swift */; };
+		D27C18222145D2150094EC68 /* Shooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C18212145D2150094EC68 /* Shooter.swift */; };
+		D27C18242145D2210094EC68 /* Slosher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C18232145D2210094EC68 /* Slosher.swift */; };
+		D27C18282145D23B0094EC68 /* Splattling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C18272145D23B0094EC68 /* Splattling.swift */; };
 		D2801D4A2139D8B30011AF93 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2801D482139D8B30011AF93 /* GameCell.swift */; };
 		D2801D4B2139D8B30011AF93 /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2801D492139D8B30011AF93 /* GameCell.xib */; };
 		D28B781D212E7EA7002BCD09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B781C212E7EA7002BCD09 /* AppDelegate.swift */; };
@@ -39,6 +48,15 @@
 		D207215C213B4D090056C23A /* PlayerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardView.swift; sourceTree = "<group>"; };
 		D2231FEF21329388001CEB4A /* NewGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameVC.swift; sourceTree = "<group>"; };
 		D2231FF021329388001CEB4A /* NewGameVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewGameVC.xib; sourceTree = "<group>"; };
+		D27C18152145D0790094EC68 /* Blaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blaster.swift; sourceTree = "<group>"; };
+		D27C18172145D1DD0094EC68 /* Brella.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brella.swift; sourceTree = "<group>"; };
+		D27C18192145D1E50094EC68 /* Brush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brush.swift; sourceTree = "<group>"; };
+		D27C181B2145D1F00094EC68 /* Charger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charger.swift; sourceTree = "<group>"; };
+		D27C181D2145D1F90094EC68 /* Dualies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dualies.swift; sourceTree = "<group>"; };
+		D27C181F2145D2050094EC68 /* Roller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roller.swift; sourceTree = "<group>"; };
+		D27C18212145D2150094EC68 /* Shooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shooter.swift; sourceTree = "<group>"; };
+		D27C18232145D2210094EC68 /* Slosher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slosher.swift; sourceTree = "<group>"; };
+		D27C18272145D23B0094EC68 /* Splattling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splattling.swift; sourceTree = "<group>"; };
 		D2801D482139D8B30011AF93 /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		D2801D492139D8B30011AF93 /* GameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCell.xib; sourceTree = "<group>"; };
 		D28B7819212E7EA7002BCD09 /* splatoonBoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = splatoonBoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +90,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D27C18142145D0500094EC68 /* Weapons */ = {
+			isa = PBXGroup;
+			children = (
+				D29AC40F213F4AFC00909DA4 /* Weapon.swift */,
+				D27C18152145D0790094EC68 /* Blaster.swift */,
+				D27C18172145D1DD0094EC68 /* Brella.swift */,
+				D27C18192145D1E50094EC68 /* Brush.swift */,
+				D27C181B2145D1F00094EC68 /* Charger.swift */,
+				D27C181D2145D1F90094EC68 /* Dualies.swift */,
+				D27C181F2145D2050094EC68 /* Roller.swift */,
+				D27C18212145D2150094EC68 /* Shooter.swift */,
+				D27C18232145D2210094EC68 /* Slosher.swift */,
+				D27C18272145D23B0094EC68 /* Splattling.swift */,
+			);
+			path = Weapons;
+			sourceTree = "<group>";
+		};
 		D28B7810212E7EA7002BCD09 = {
 			isa = PBXGroup;
 			children = (
@@ -132,12 +167,12 @@
 		D28B7833212E7EE9002BCD09 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D27C18142145D0500094EC68 /* Weapons */,
 				D28B7823212E7EA7002BCD09 /* splatoonBoom.xcdatamodeld */,
 				D28B7838212E80E2002BCD09 /* CoreDataManager.swift */,
 				D28B783A212E8390002BCD09 /* Player.swift */,
 				D2CEAB4D2132083C003ED2ED /* Game.swift */,
 				D29AC40D213F4AF200909DA4 /* GameMode.swift */,
-				D29AC40F213F4AFC00909DA4 /* Weapon.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -302,16 +337,25 @@
 				D2CEAB5121320A18003ED2ED /* PlayerInteractor.swift in Sources */,
 				D2231FF121329388001CEB4A /* NewGameVC.swift in Sources */,
 				D29AC410213F4AFC00909DA4 /* Weapon.swift in Sources */,
+				D27C181C2145D1F00094EC68 /* Charger.swift in Sources */,
 				D2801D4A2139D8B30011AF93 /* GameCell.swift in Sources */,
+				D27C18282145D23B0094EC68 /* Splattling.swift in Sources */,
 				D28B781D212E7EA7002BCD09 /* AppDelegate.swift in Sources */,
 				D29AC40E213F4AF200909DA4 /* GameMode.swift in Sources */,
 				D2CEAB4E2132083C003ED2ED /* Game.swift in Sources */,
 				D28B7839212E80E2002BCD09 /* CoreDataManager.swift in Sources */,
+				D27C181E2145D1F90094EC68 /* Dualies.swift in Sources */,
+				D27C18202145D2050094EC68 /* Roller.swift in Sources */,
+				D27C18182145D1DD0094EC68 /* Brella.swift in Sources */,
 				D28B783B212E8390002BCD09 /* Player.swift in Sources */,
+				D27C18242145D2210094EC68 /* Slosher.swift in Sources */,
 				D28B7825212E7EA7002BCD09 /* splatoonBoom.xcdatamodeld in Sources */,
+				D27C18162145D0790094EC68 /* Blaster.swift in Sources */,
 				D207215D213B4D090056C23A /* PlayerCardView.swift in Sources */,
+				D27C181A2145D1E50094EC68 /* Brush.swift in Sources */,
 				D28B783E212E85F4002BCD09 /* Journal.swift in Sources */,
 				D2A7D39821365C9B006D203D /* NewGameInteractor.swift in Sources */,
+				D27C18222145D2150094EC68 /* Shooter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
