@@ -10,22 +10,21 @@ import UIKit
 
 class PlayerVC: UIViewController {
 
-    @IBOutlet private weak var playerNameLabel: UILabel!
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var playerStackView: UIStackView!
-
+    @IBOutlet weak var playerCard: PlayerCardView!
     private var interactor = PlayerInteractor()
-
-    var headerStackView = UIStackView()
-    var dataStackView = UIStackView()
     var player = Player()
+    private let gameCellID = "GameCellID"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.black
+        self.title = "splatoonBoom"
 
         let rightBarButton = UIBarButtonItem(title: "New Match", style: .plain, target: self, action: #selector(newMatchTapped))
         self.navigationItem.rightBarButtonItem = rightBarButton
-        self.configurePlayerStackView()
+
+        self.tableView.register(UINib(nibName: String(describing: GameCell.self), bundle: nil), forCellReuseIdentifier: self.gameCellID)
         self.tableView.dataSource = self
         self.tableView.delegate = self
     }
@@ -36,69 +35,23 @@ class PlayerVC: UIViewController {
         self.fetchPlayer()
     }
 
-    func prepareForReuse() {
-        while !self.dataStackView.arrangedSubviews.isEmpty {
-            self.dataStackView.arrangedSubviews[0].removeFromSuperview()
-        }
-    }
-
     func fetchPlayer() {
         interactor.fetchPlayer { (player, error) in
             self.player = player
             self.fetchGames()
             DispatchQueue.main.async {
-                self.configureDataStackView()
+                self.playerCard.configure(player: player)
             }
         }
     }
 
     func fetchGames() {
         interactor.fetchGame { (games, error) in
-            self.player.games = games
+            self.player.games = games.reversed()
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
-    }
-
-    func configurePlayerStackView() {
-        self.playerStackView.addArrangedSubview(headerStackView)
-        self.configureHeaderStackViews()
-        self.playerStackView.addArrangedSubview(dataStackView)
-        self.playerStackView.axis = .vertical
-        self.playerStackView.distribution = .fillEqually
-        self.playerStackView.spacing = 10
-    }
-
-    func configureHeaderStackViews() {
-        let headers = ["Wins", "Losses", "WL%", "Splats", "Specials"]
-        for header in headers {
-            let headerLabel = UILabel()
-            headerLabel.text = header
-            headerLabel.textAlignment = .center
-            self.headerStackView.addArrangedSubview(headerLabel)
-            headerLabel.sizeToFit()
-        }
-        self.headerStackView.distribution = .fillEqually
-        self.headerStackView.spacing = 10
-    }
-
-    func configureDataStackView() {
-        let playerData: [Any] = [self.player.wins, self.player.losses, self.player.ratioWL, self.player.kills, self.player.specials]
-        self.prepareForReuse()
-        for stat in playerData {
-            let dataLabel = UILabel()
-            if stat as! Double == playerData[2] as! Double {
-                dataLabel.text = String(format: "%.2f", self.player.ratioWL)
-            } else {
-                dataLabel.text = "\(stat)"
-            }
-            dataLabel.textAlignment = .center
-            self.dataStackView.addArrangedSubview(dataLabel)
-        }
-        self.dataStackView.distribution = .fillEqually
-        self.dataStackView.spacing = 10
-        self.dataStackView.alignment = .center
     }
 
     @objc func newMatchTapped() {
@@ -115,9 +68,9 @@ extension PlayerVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = self.player.games[indexPath.row].gameResult.rawValue
-        return cell
+        let gameCell = self.tableView.dequeueReusableCell(withIdentifier: self.gameCellID) as! GameCell
+        gameCell.configureCell(game: player.games[indexPath.row])
+        return gameCell
     }
 
 }

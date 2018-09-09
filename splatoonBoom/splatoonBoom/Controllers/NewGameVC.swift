@@ -64,6 +64,8 @@ class NewGameVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource 
     @objc func didTapSaveButton() {
         self.currPlayer.totalGames += 1
         self.currPlayer.ratioWL = Player.setWLRatio(player: self.currPlayer)
+        self.currPlayer.mostKills = Player.setMostKills(game: self.newGame, player: self.currPlayer)
+        self.currPlayer.mostSpecials = Player.setMostSpecials(game: self.newGame, player: self.currPlayer)
         self.interactor.createGame(game: self.newGame) { (error) in }
         self.interactor.updatePlayer(player: self.currPlayer) { (error) in }
         self.navigationController?.popViewController(animated: true)

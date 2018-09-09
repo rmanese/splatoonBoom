@@ -23,6 +23,8 @@
 		D28B7839212E80E2002BCD09 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B7838212E80E2002BCD09 /* CoreDataManager.swift */; };
 		D28B783B212E8390002BCD09 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B783A212E8390002BCD09 /* Player.swift */; };
 		D28B783E212E85F4002BCD09 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B783D212E85F4002BCD09 /* Journal.swift */; };
+		D29AC40E213F4AF200909DA4 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29AC40D213F4AF200909DA4 /* GameMode.swift */; };
+		D29AC410213F4AFC00909DA4 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29AC40F213F4AFC00909DA4 /* Weapon.swift */; };
 		D2A7D39821365C9B006D203D /* NewGameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7D39721365C9B006D203D /* NewGameInteractor.swift */; };
 		D2CEAB4E2132083C003ED2ED /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CEAB4D2132083C003ED2ED /* Game.swift */; };
 		D2CEAB5121320A18003ED2ED /* PlayerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CEAB5021320A18003ED2ED /* PlayerInteractor.swift */; };
@@ -50,6 +52,8 @@
 		D28B7838212E80E2002BCD09 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D28B783A212E8390002BCD09 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		D28B783D212E85F4002BCD09 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		D29AC40D213F4AF200909DA4 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
+		D29AC40F213F4AFC00909DA4 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
 		D2A7D39721365C9B006D203D /* NewGameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameInteractor.swift; sourceTree = "<group>"; };
 		D2CEAB4D2132083C003ED2ED /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		D2CEAB5021320A18003ED2ED /* PlayerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInteractor.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 				D28B7838212E80E2002BCD09 /* CoreDataManager.swift */,
 				D28B783A212E8390002BCD09 /* Player.swift */,
 				D2CEAB4D2132083C003ED2ED /* Game.swift */,
+				D29AC40D213F4AF200909DA4 /* GameMode.swift */,
+				D29AC40F213F4AFC00909DA4 /* Weapon.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -295,8 +301,10 @@
 				D28B7836212E7F3E002BCD09 /* PlayerVC.swift in Sources */,
 				D2CEAB5121320A18003ED2ED /* PlayerInteractor.swift in Sources */,
 				D2231FF121329388001CEB4A /* NewGameVC.swift in Sources */,
+				D29AC410213F4AFC00909DA4 /* Weapon.swift in Sources */,
 				D2801D4A2139D8B30011AF93 /* GameCell.swift in Sources */,
 				D28B781D212E7EA7002BCD09 /* AppDelegate.swift in Sources */,
+				D29AC40E213F4AF200909DA4 /* GameMode.swift in Sources */,
 				D2CEAB4E2132083C003ED2ED /* Game.swift in Sources */,
 				D28B7839212E80E2002BCD09 /* CoreDataManager.swift in Sources */,
 				D28B783B212E8390002BCD09 /* Player.swift in Sources */,
